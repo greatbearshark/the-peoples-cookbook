@@ -62,7 +62,7 @@ export default class Site extends App {
                 <a>The People's Cookbook</a>
               </Link>
             </h1>
-            {/* <EditLink cms={this.cms} /> */}
+            <EditLink cms={this.cms} />
             <Component {...pageProps} />
           </div>
         </TinacmsGithubProvider>
