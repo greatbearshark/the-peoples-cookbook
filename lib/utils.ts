@@ -3,7 +3,7 @@ import { join } from 'path';
 import getConfig from 'next/config';
 const { serverRuntimeConfig } = getConfig();
 
-const contentDirectory = join(serverRuntimeConfig.PROJECT_ROOT, './content');
+const contentDirectory = join(serverRuntimeConfig.PROJECT_ROOT, 'content');
 
 export function getPostSlugs() {
   return fs.readdirSync(contentDirectory);
