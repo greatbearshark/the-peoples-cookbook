@@ -40,11 +40,9 @@ export const RecipeCreatorPlugin = {
   ],
   async onSubmit(values: any, cms: CMS) {
     // cms.api.github;
-    console.log(cms);
-    const fileRelativePath = `content/${slugify(values.title)}.json`;
+    const fileRelativePath = `./content/${slugify(values.title)}.json`;
     // Call functions that create the new blog post. For example:
     // cms.apis.someBackend.createPost(values);
-    console.log({ values });
     cms.api.github
       .upload(fileRelativePath, JSON.stringify(values), 'Update from TinaCMS')
       .then((response) => {
