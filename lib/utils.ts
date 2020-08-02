@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { join } from 'path';
 
-const contentDirectory = join(process.cwd(), 'content');
+const contentDirectory = join(__dirname, 'content');
 
 export function getPostSlugs() {
   return fs.readdirSync(contentDirectory);
