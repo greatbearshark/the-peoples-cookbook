@@ -1,9 +1,11 @@
 import fs from 'fs';
 import { join, resolve } from 'path';
 import getConfig from 'next/config';
-const { serverRuntimeConfig } = getConfig();
+const config = getConfig();
 
-const contentDirectory = join(serverRuntimeConfig.PROJECT_ROOT, 'content');
+const PROJECT_ROOT = config?.serverRuntimeConfig.PROJECT_ROOT || '.';
+
+const contentDirectory = join(PROJECT_ROOT, 'content');
 
 resolve('./content/');
 
